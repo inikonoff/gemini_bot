@@ -334,7 +334,7 @@ async def generate_image(update: Update, context: ContextTypes.DEFAULT_TYPE, pro
 # Основная функция
 def main():
     # Создаем Application
-    application = Application.builder().token(os.getenv('TELEGRAM_BOT_TOKEN')).build()
+    application = Application.builder().token(os.getenv('TELEGRAM_TOKEN')).build()
     
     # Регистрируем обработчики команд
     application.add_handler(CommandHandler("start", start))
