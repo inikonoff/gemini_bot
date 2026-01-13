@@ -1,4 +1,3 @@
-# utils/session_manager.py
 from datetime import datetime
 from config import DEFAULT_MODEL
 
@@ -11,5 +10,4 @@ class UserSession:
         self.message_count = 0
         self.last_activity = datetime.now()
 
-# Глобальный словарь сессий
 user_sessions = {}
