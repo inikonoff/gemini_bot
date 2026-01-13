@@ -1,9 +1,8 @@
 import os
 import logging
+import asyncio # Добавлен для asyncio.to_thread
 from datetime import datetime
 from io import BytesIO
-from typing import Optional
-
 from aiogram import F, Router
 from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.filters import Command
@@ -13,7 +12,8 @@ from PIL import Image
 import requests
 
 from config import MAX_HISTORY_MESSAGES, GEMINI_TIMEOUT
-from main import user_sessions, UserSession
+# ИСПРАВЛЕННЫЙ ИМПОРТ:
+from utils.session_manager import user_sessions, UserSession
 
 router = Router()
 logger = logging.getLogger(__name__)
