@@ -18,6 +18,13 @@ import google.generativeai as genai
 from PIL import Image
 import requests
 from dotenv import load_dotenv
+# ... (ваши импорты)
+from config import MAX_HISTORY_MESSAGES, GEMINI_TIMEOUT
+# ИСПРАВЛЕННЫЙ ИМПОРТ:
+from utils.session_manager import user_sessions, UserSession 
+
+router = Router()
+# ... (далее ваш код без изменений)
 
 # Загружаем переменные окружения
 load_dotenv()
